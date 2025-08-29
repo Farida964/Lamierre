@@ -3,7 +3,9 @@ import styles from "./hero.module.css";
 function Hero() {
     return (
         <div className={styles.hero}>
-            <span className={styles.span01}>Hijab</span>
+        <div className={styles.hero_container}>
+
+        </div>
         </div>
     )
 }

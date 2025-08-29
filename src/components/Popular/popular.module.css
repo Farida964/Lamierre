@@ -1,0 +1,27 @@
+.bannerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.bannerLeft,
+.bannerRight {
+  flex: 1;
+  height: 40px;
+  background-color: #c96f68; /* warna merah sesuai gambar */
+}
+
+.bannerLeft {
+    border-radius: 40px 5px 40px 5px ;
+}
+
+.bannerRight {
+    border-radius: 5px 40px 5px 40px ;
+}
+
+.text {
+  font-weight: bold;
+  margin: 0 15px;
+  white-space: nowrap;
+}
