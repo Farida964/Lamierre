@@ -8,7 +8,7 @@ function Navbar() {
             <ul className={styles.navbar__list}>
                 <li className={styles.navbar__item}><Link to="/">Home</Link></li>
                 <li className={styles.navbar__item}><Link to="/product">Product</Link></li>
-                <li className={styles.navbar__item}><Link to="/feedback">Gallery</Link></li>
+                <li className={styles.navbar__item}><Link to="/gallery">Gallery</Link></li>
                 <li className={styles.navbar__item}><Link to="/review">Review</Link></li>
             </ul>
         </div>
