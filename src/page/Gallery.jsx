@@ -1,10 +1,12 @@
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
+import Hero from '../components/Hero.jsx/Hero';
 
 function Gallery() {
   return (
     <div>
       <Navbar />
+      <Hero />
 
       <div className="gallery-container">
         <h2 className="gallery-title">Gallery</h2>
