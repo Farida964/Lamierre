@@ -1,21 +1,23 @@
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import Hero from '../components/Hero.jsx/Hero';
+import Galeri from '../components/Galeri/Galeri';
 
 function Gallery() {
   return (
     <div>
       <Navbar />
       <Hero />
+      <Galeri />
 
-      <div className="gallery-container">
+      {/* <div className="gallery-container">
         <h2 className="gallery-title">Gallery</h2>
         <p className="gallery-subtitle">
           Thank you to our customers who have trusted Lamierrè.
         </p>
 
         <div className="gallery-grid">
-          {/* Gambar bisa ganti sesuai mood board */}
+          Gambar bisa ganti sesuai mood board
           <div className="gallery-item"></div>
           <div className="gallery-item"></div>
           <div className="gallery-item"></div>
@@ -26,7 +28,7 @@ function Gallery() {
           <div className="gallery-item"></div>
           <div className="gallery-item"></div>
         </div>
-      </div>
+      </div> */}
 
       <Footer />
 

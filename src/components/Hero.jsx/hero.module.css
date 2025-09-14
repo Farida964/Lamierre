@@ -1,10 +1,46 @@
 .hero {
     background-image: url('/2.png');
-    padding: 50px 455px 50px 500px ;
+    padding: 50px 455px 50px 500px;
     min-width: 320px;
     max-width: 1185px;
     margin-left: -30px;
     height: 400px;
     background-size: cover;
+    
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* Mobile (≤757px) */
+@media (max-width: 757px) {
+  .hero {
+    padding: 30px 20px;   /* lebih sempit biar muat di layar kecil */
+    margin-left: 0;
+    margin-top: -50px;
+    height: 200px;        /* lebih pendek */
+    max-width: 100%;      /* biar full lebar */
+    border-radius: 12px;  /* opsional biar rapi */
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    padding: 40px 80px;   /* lebih proporsional */
+    margin-left: 0;
+    margin-top: -100px;
+    height: 300px;
+    max-width: 900px;
+  }
+}
+
+/* Desktop (≥992px) */
+@media (min-width: 992px) {
+  .hero {
+    padding: 50px 455px 50px 500px; /* tetap besar */
+    margin-left: -30px;
     margin-top: -200px;
+    height: 400px;
+    max-width: 1185px;
+  }
 }

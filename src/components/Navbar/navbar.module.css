@@ -92,16 +92,15 @@
 /* Mobile (≤757px) */
 @media (max-width: 757px) {
   .navbar {
+    width: 90%;
+    height: 40px;
     border-radius: 20px;
-    box-shadow: 50px rgba(0, 0, 0, 0.1);
-    border: #222 solid 1px;
-    height: 45px;
-    margin-top: 3px;
-
+    margin-top: 5px;
+    padding: 0 10px;
   }
   .navbar__list_container {
     margin: 0;
-    margin-right: -10px;
+    margin-right: -8px;
   }
   .navbar__list {
     gap: 3px;
@@ -111,14 +110,17 @@
   }
   .navbar__item a {
     font-size: 10px;
-    padding: 4px 4px;
+    padding: 4px 6px;
   }
 }
 
 /* Tablet (768px - 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar {
-    padding: 10px 24px;
+    width: 70%;
+    height: 45px;
+    padding: 8px 20px;
+    border-radius: 40px;
   }
   .navbar__list_container {
     margin: 0 16px;
@@ -138,7 +140,10 @@
 /* Desktop (≥992px) */
 @media (min-width: 992px) {
   .navbar {
-    padding: 12px 48px;
+    width: 50%;
+    height: 50px;
+    padding: 10px 30px;
+    border-radius: 60px;
   }
   .navbar__list_container {
     margin: 0 32px;
@@ -152,5 +157,13 @@
   .navbar__item a {
     font-size: 16px;
     padding: 6px 14px;
+  }
+}
+
+/* Extra small screen (≤370px) */
+@media (max-width: 370px) {
+  .navbar__item a {
+    font-size: 8px;
+    padding: 3px 5px;
   }
 }

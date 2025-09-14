@@ -45,7 +45,7 @@ function Review() {
 
         {/* Add Review Section */}
         <section style={styles.addReview}>
-          <button style={styles.backBtn}>← Back</button>
+          {/* <button style={styles.backBtn}>← Back</button> */}
           <h3 style={styles.addTitle}>Apakah kamu puas dengan Lamierrè?</h3>
 
           {/* Rating */}
@@ -73,7 +73,7 @@ function Review() {
               onChange={(e) => setNewReview(e.target.value)}
             ></textarea>
             <button type="submit" style={styles.submitBtn}>
-              Save
+              Share
             </button>
           </form>
         </section>
