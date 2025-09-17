@@ -20,6 +20,7 @@
   font-weight: bold;
   margin-bottom: 10px;
   color: #222;
+  text-align: left;
 }
 
 .footer ul {
@@ -30,6 +31,7 @@
 
 .footer ul li {
   margin-bottom: 5px;
+  text-align: left;
 }
 
 .footer a {
@@ -41,12 +43,20 @@
 .footer a:hover {
   color: #e91e63;
 }
+.socials {
+  display: flex;
+  justify-content: flex-start; /* gambar mulai dari kiri */
+  align-items: center;
+  gap: 16px; /* jarak antar icon */
+  padding-left: 0; /* pastikan tidak ada padding kiri */
+}
 
 .socials img {
   width: 24px;
   height: 24px;
   transition: transform 0.3s;
   margin-right: 8px;
+  align-items: left;
 }
 
 .socials img:hover {
@@ -69,4 +79,12 @@
 
 .footerBottom strong {
   color: #222;
+}
+.newletter h3, p {
+  text-align: left;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 20px;
 }

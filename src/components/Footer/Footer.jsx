@@ -34,7 +34,7 @@ function Footer() {
             </a>
           </div>
         </div>
-        <div>
+        <div className={styles.newsletter}>
           <h3>Sign Up</h3>
           <p>Dapatkan promo & info eksklusif langsung ke email kamu.</p>
         </div>
@@ -46,8 +46,8 @@ function Footer() {
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Paypal_2014_logo.png" alt="Paypal" />
         </div>
-        <p>
-          © {new Date().getFullYear()} <strong>L@mierrè</strong> – All rights reserved.
+        <p className={styles.copy}>
+          © {new Date().getFullYear()} <strong>L@mierrè</strong> - All rights reserved.
         </p>
       </div>
     </footer>

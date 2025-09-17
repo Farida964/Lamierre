@@ -1,20 +1,18 @@
 import styles from "./galeri.module.css";
 import axios from "axios";
-import { useEffect, useState, useRef } from "react";
-
+import { useEffect, useState } from "react";
+// import Artikel1 from "../page/Artikel1";
 
 function Galeri() {
-  const [artikel, setArtikel] = useState([]); // simpan semua artikel.json
-  const [konten, setKonten] = useState([]); // simpan semua konten.json
-  const videoRefs = useRef([]); // untuk kontrol video play/pause
-  const [playingIndex, setPlayingIndex] = useState(null); 
+  const [artikel, setArtikel] = useState([]);
+  const [konten, setKonten] = useState([]);
 
   useEffect(() => {
     // Ambil artikel.json
     const fetchArtikel = async () => {
       try {
         const response = await axios.get("/artikel.json");
-        setArtikel(response.data); // simpan semua artikel
+        setArtikel(response.data);
       } catch (error) {
         console.error("Error fetching artikel:", error);
       }
@@ -39,15 +37,6 @@ function Galeri() {
     fetchKonten();
   }, []);
 
-  const handlePlay = (index) => {
-  setPlayingIndex(index); // ubah ke mode video
-  setTimeout(() => {
-    if (videoRefs.current[index]) {
-      videoRefs.current[index].play(); // langsung play setelah render
-    }
-  }, 0);
-};
-
   return (
     <div className={styles.container}>
       {/* Banner */}
@@ -64,39 +53,28 @@ function Galeri() {
             src={artikel[0].img}
             alt="Artikel Atas"
             className={styles.artikelImg}
+            onClick={() => window.open('/artikel1', '_self')}
+            style={{ cursor: "pointer" }}
           />
           <p className={styles.artikelDesc}>{artikel[0].desc}</p>
         </div>
       )}
 
-     <div className={styles.bottomRow}>
-  {konten.slice(0, 4).map((item, index) => (
-    <div key={index} className={styles.card}>
-      {playingIndex === index ? (
-        <video
-          ref={(el) => (videoRefs.current[index] = el)}
-          className={styles.media}
-          controls
-        >
-          <source src={item.video} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      ) : (
-        <img
-          src={item.img}
-          alt={item.title}
-          className={styles.media}
-          onClick={() => handlePlay(index)}
-          style={{ cursor: "pointer" }}
-        />
-      )}
-
-      <h3 className={styles.title}>{item.title}</h3>
-      <p className={styles.subtitle}>{item.sub_title}</p>
-    </div>
-  ))}
-</div>
-
+      <div className={styles.bottomRow}>
+        {konten.slice(0, 4).map((item, index) => (
+          <div key={index} className={styles.card}>
+            <img
+              src={item.img}
+              alt={item.title}
+              className={styles.media}
+              onClick={() => window.open(item.video, "_blank")}
+              style={{ cursor: "pointer" }}
+            />
+            <h3 className={styles.title}>{item.title}</h3>
+            <p className={styles.subtitle}>{item.sub_title}</p>
+          </div>
+        ))}
+      </div>
 
       {/* ====== Artikel Bawah (index 1) ====== */}
       {artikel.length > 1 && (

@@ -10,6 +10,7 @@ import TentangKami from './page/TentangKami';
 import Gallery from './page/Gallery';
 import Review from './page/Review';
 import Product from './page/Product';
+import Artikel1 from "./page/Artikel1";
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <Route path="/gallery" element={<Gallery />} />
       <Route path="/review" element={<Review />} />
       <Route path="/product" element={<Product />} />
+      <Route path="/artikel1" element={<Artikel1 />} />
     </Routes>
     
     

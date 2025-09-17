@@ -1,0 +1,23 @@
+[
+     {
+      "id" : "1",
+      "title": "Free Ongkir",
+      "subtitle": null,
+      "condition": "Min. belanja Rp.25K",
+      "desc": "Nikmati Gratis Ongkir se-JABODETABEK dengan minimal belanja Rp25.000! Hemat belanja, kiriman tetap sampai tujuan tanpa biaya tambahan."
+    },
+    {
+      "id" : "2",
+      "title": "Promo Agustus",
+      "subtitle": "s.d 40%",
+      "condition": "Min. belanja Rp.55K",
+      "desc": "Rayakan PROMO 10.10! Dapatkan potongan spesial dengan minimal belanja Rp55.000. Belanja lebih hemat, promo hanya berlaku terbatas!"
+    },
+     {
+      "id" : "3",
+      "title": "Promo Agustus",
+      "subtitle": "s.d 40%",
+      "condition": "Min. belanja Rp.55K",
+      "desc": "Rayakan PROMO 10.10! Dapatkan potongan spesial dengan minimal belanja Rp55.000. Belanja lebih hemat, promo hanya berlaku terbatas!"
+    }
+]

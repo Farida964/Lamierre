@@ -165,3 +165,26 @@
 .popular-section {
   margin-bottom: 50px; 
 }
+
+.buttonWrapper {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+.buttonWrapper button {
+  background-color: #CB6E68;
+  color:#ffffff;
+  border-radius: 80px;
+}
+.button {
+  color: #ffffff;     /* warna teks putih */
+  text-decoration: none; /* hilangkan underline */
+  display: inline-block; 
+  padding: 5px 30px;
+}
+.button:hover,
+.button:visited,
+.button:active {
+  color: #ffffff;        /* tetap putih */
+  text-decoration: none; /* jangan muncul garis bawah */
+}

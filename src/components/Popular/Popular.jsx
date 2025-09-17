@@ -1,6 +1,7 @@
-import styles from "./popular.module.css";
+import styles from "./Popular.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Popular() {
   const [products, setProducts] = useState([]);
@@ -111,6 +112,10 @@ function Popular() {
           </div>
         </div>
       )}
+       <br />
+      <div className={styles.buttonWrapper}>
+        <button><Link className={styles.button} to="/product">See More</Link></button>
+      </div>
     </div>
   );
 }
