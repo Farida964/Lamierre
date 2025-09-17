@@ -1,7 +1,7 @@
 import styles from "./Popular.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import DetailProduct from "../DetailProduct/DetailProduct";
 
 function Popular() {
@@ -70,9 +70,9 @@ function Popular() {
 
       <br />
       <div className={styles.buttonWrapper}>
-        <button>
+        {/* <button>
           <Link className={styles.button} to="/product">See More</Link>
-        </button>
+        </button> */}
       </div>
     </div>
   );

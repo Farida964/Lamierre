@@ -36,11 +36,14 @@
 
 .card {
   background: #f2a6a6;
-  border-radius: 20px;
+  border-radius: 20px 20px 130px 130px;
   width: 200px;
   padding: 15px;
   text-align: center;
   transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card:hover {
@@ -53,25 +56,31 @@
   object-fit: cover;
   border-radius: 15px;
 }
+.title {
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  padding: 5px 10px;
+}
 
 .button_detail {
   margin-top: 10px;
   background: #d46a6a;
   color: white;
   border: none;
-  padding: 8px 12px;
-  border-radius: 15px;
+  padding: 2px 20px;
+  border-radius: 25px;
   cursor: pointer;
+  margin-bottom: 8px;
 }
 
 .price {
   margin-top: 8px;
   font-weight: bold;
   color: #fff;
-  background: #e07b7b;
   padding: 5px 10px;
   border-radius: 12px;
   display: inline-block;
+  margin-top: 0;
 }
 
 /* POPUP */
