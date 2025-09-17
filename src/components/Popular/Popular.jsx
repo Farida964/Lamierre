@@ -2,12 +2,11 @@ import styles from "./Popular.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import DetailProduct from "../DetailProduct/DetailProduct";
 
 function Popular() {
   const [products, setProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [zoom, setZoom] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,37 +22,15 @@ function Popular() {
         }
       }
     };
-
     fetchData();
   }, []);
 
   const handleDetailClick = (item) => {
-    setSelectedProduct(item);
-    setCurrentImageIndex(0); // reset gambar pertama
-    setZoom(false);
+    setSelectedProduct(item); // buka popup
   };
 
   const handleClosePopup = () => {
-    setSelectedProduct(null);
-    setZoom(false);
-  };
-
-  const handleImageClick = () => {
-    setZoom(!zoom);
-  };
-
-  const handleNext = () => {
-    if (!selectedProduct) return;
-    setCurrentImageIndex((prev) =>
-      prev === selectedProduct.imgs.length - 1 ? 0 : prev + 1
-    );
-  };
-
-  const handlePrev = () => {
-    if (!selectedProduct) return;
-    setCurrentImageIndex((prev) =>
-      prev === 0 ? selectedProduct.imgs.length - 1 : prev - 1
-    );
+    setSelectedProduct(null); // tutup popup
   };
 
   return (
@@ -64,7 +41,7 @@ function Popular() {
         <div className={styles.bannerRight}></div>
       </div>
 
-     <div className={styles.cardWrapper}>
+      <div className={styles.cardWrapper}>
         {products.map((item) => (
           <div className={styles.card} key={item.id}>
             <img
@@ -84,37 +61,18 @@ function Popular() {
         ))}
       </div>
 
-      {/* POPUP */}
-      {selectedProduct && (
-        <div className={styles.popupOverlay} onClick={handleClosePopup}>
-          <div
-            className={`${styles.popup} ${zoom ? styles.zoomed : ""}`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className={styles.closeBtn} onClick={handleClosePopup}>
-              ✕
-            </button>
+      {/* POPUP Detail */}
+      <DetailProduct
+        isOpen={!!selectedProduct}
+        onClose={handleClosePopup}
+        product={selectedProduct}
+      />
 
-            <div className={styles.imageWrapper}>
-              <button className={styles.navBtn} onClick={handlePrev}>‹</button>
-              <img
-                src={selectedProduct.imgs[currentImageIndex]}
-                alt={selectedProduct.title}
-                className={`${styles.popupImage} ${zoom ? styles.zoom : ""}`}
-                onClick={handleImageClick}
-              />
-              <button className={styles.navBtn} onClick={handleNext}>›</button>
-            </div>
-
-            <h2>{selectedProduct.title}</h2>
-            <p className={styles.popupPrice}>Rp. {selectedProduct.price}</p>
-            <p className={styles.popupDetail}>{selectedProduct.detail}</p>
-          </div>
-        </div>
-      )}
-       <br />
+      <br />
       <div className={styles.buttonWrapper}>
-        <button><Link className={styles.button} to="/product">See More</Link></button>
+        <button>
+          <Link className={styles.button} to="/product">See More</Link>
+        </button>
       </div>
     </div>
   );

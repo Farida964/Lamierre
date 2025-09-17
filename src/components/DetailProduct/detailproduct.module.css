@@ -1,0 +1,118 @@
+/* Overlay */
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Popup Card */
+.popup {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 600px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #444;
+}
+
+.imageWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.popupImage {
+  max-width: 80%;
+  max-height: 280px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.zoom {
+  transform: scale(1.3);
+}
+
+.navBtn {
+  background: #eee;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 50%;
+  transition: background 0.2s ease;
+}
+
+.navBtn:hover {
+  background: #ddd;
+}
+
+/* Text */
+.title {
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.popupPrice {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.popupDetail {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* Button Wrapper */
+.buttonWrapper {
+  margin-top: 12px;
+}
+
+.button {
+  display: inline-block;
+  background: #457b9d;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: #356179;
+}
+
+/* Animasi */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
