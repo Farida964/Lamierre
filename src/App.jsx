@@ -11,7 +11,7 @@ import Gallery from './page/Gallery';
 import Review from './page/Review';
 import Product from './page/Product';
 import Artikel1 from "./page/Artikel1";
-
+import Payment from './page/Payment';
 
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
       <Route path="/review" element={<Review />} />
       <Route path="/product" element={<Product />} />
       <Route path="/artikel1" element={<Artikel1 />} />
+      <Route path="/payment" element={<Payment />} />
     </Routes>
     
     

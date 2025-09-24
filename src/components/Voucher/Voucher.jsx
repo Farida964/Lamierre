@@ -13,11 +13,11 @@ function Voucher() {
       const local = localStorage.getItem("voucher");
       if (local) {
         const parsed = JSON.parse(local);
-        setDatas(parsed.slice(0, 3)); 
+        setDatas(parsed.slice(0, 3));
       } else {
         try {
           const response = await axios.get("/voucher.json");
-          setDatas(response.data.slice(0, 3)); 
+          setDatas(response.data.slice(0, 3));
         } catch (error) {
           console.error("Error fetching data:", error);
         }

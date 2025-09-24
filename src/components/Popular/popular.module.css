@@ -9,7 +9,7 @@
 .bannerRight {
   flex: 1;
   height: 40px;
-  background-color: #c96f68; /* warna merah sesuai gambar */
+  background-color: #fbbcc8; 
 }
 
 .bannerLeft {
@@ -35,7 +35,7 @@
 }
 
 .card {
-  background: #f2a6a6;
+  background: #fbbcc8;
   border-radius: 20px 20px 130px 130px;
   width: 200px;
   padding: 15px;
@@ -64,8 +64,8 @@
 
 .button_detail {
   margin-top: 10px;
-  background: #d46a6a;
-  color: white;
+  background: #f5a5a5;
+  color: #FFFFFF;
   border: none;
   padding: 2px 20px;
   border-radius: 25px;
@@ -76,7 +76,7 @@
 .price {
   margin-top: 8px;
   font-weight: bold;
-  color: #fff;
+  color: #FFFFFF;
   padding: 5px 10px;
   border-radius: 12px;
   display: inline-block;
@@ -98,7 +98,7 @@
 }
 
 .popup {
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 15px;
   padding: 20px;
   width: 450px;
@@ -145,7 +145,7 @@
   transform: translateY(-50%);
   background: rgba(0,0,0,0.5);
   border: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 24px;
   cursor: pointer;
   padding: 5px 10px;

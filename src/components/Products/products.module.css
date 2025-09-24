@@ -9,7 +9,7 @@
 .bannerRight {
   flex: 1;
   height: 40px;
-  background-color: #c96f68; /* warna merah sesuai gambar */
+  background-color: #fbbcc8; /* warna merah sesuai gambar */
 }
 
 .bannerLeft {
@@ -35,7 +35,7 @@
 }
 
 .card {
-  background: #f2a6a6;
+  background: #fbbcc8;
   border-radius: 20px 20px 130px 130px;
   width: 200px;
   padding: 15px;
@@ -64,8 +64,8 @@
 
 .button_detail {
   margin-top: 10px;
-  background: #d46a6a;
-  color: white;
+  background: #f5a5a5;
+  color: #fff;
   border: none;
   padding: 2px 20px;
   border-radius: 25px;

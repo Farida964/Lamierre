@@ -1,184 +1,90 @@
 .voucher {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
+/* Kartu Voucher */
 .voucher_card {
-    width: 350px;
-    height: 180px;
-    background-image: url('/ticket.png'); 
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-}
-.voucher_card h2 {
-    font-size: 20px;
-}
+  width: 260px;
+  height: 140px;
+  background-color: #fbbcc8;
+  color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  position: relative;
+  transition: transform 0.3s ease;
+  font-family: "Poppins", sans-serif;
 
-.title_voucher1 {
-    margin: 0;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: right;
-    margin-top: 50px;
-    margin-right: 20px;
-}
-
-.p_voucher1 {
-    margin: 5px 0 0;
-    font-weight: bold;
-    font-size: 30px;
-    text-align: right;
-    margin-right: 20px;
-}
-
-.button_detail {
-    align-self: flex-end; /* dorong ke kanan */
-    padding: 3px 20px;
-    background-color: #3056B3;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 12px;
+  /* bentuk tiket */
+  clip-path: path("M0,20 Q0,0 20,0 H240 Q260,0 260,20 V40 Q250,50 260,60 V120 Q260,140 240,140 H20 Q0,140 0,120 V80 Q10,70 0,60 Z");
 }
 
 .voucher_card:hover {
-    transform: scale(1.05);
-    transition: 0.3s;
+  transform: scale(1.05);
 }
 
-
-/* RESPONSIVE */
-
-/* MOBILE */
-@media (max-width: 410px) {
-    .voucher {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .voucher_card {
-        max-width: 70%;
-        height: auto;
-        padding: 15px;
-    }
-
-    .title_voucher1 {
-        font-size: 15px;
-        margin-top: 30px;
-        margin-right: 10px;
-    }
-
-    .p_voucher1 {
-        font-size: 13px;
-        margin-top: -2px;
-        margin-right: 5px;
-    }
-
-    .button_detail {
-        padding: 3px 15px;
-        font-size: 10px;
-    }
+/* Judul Voucher */
+.title_voucher {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
-/* MOBILE2 */
-@media (min-width: 410px) and (max-width: 767px) {
-    .voucher {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .voucher_card {
-        max-width: 70%;
-        height: auto;
-        padding: 15px;
-    }
-
-    .title_voucher1 {
-        font-size: 15px;
-        margin-top: 30px;
-        margin-right: 40px;
-    }
-
-    .p_voucher1 {
-        font-size: 13px;
-        margin-top: -2px;
-        margin-right: 40px;
-    }
-
-    .button_detail {
-        padding: 3px 15px;
-        font-size: 10px;
-        margin-right: 50px;
-    }
+/* Deskripsi */
+.p_voucher {
+  margin: 3px 0;
+  font-size: 13px;
+  opacity: 0.9;
 }
 
-/* TABLET */
-@media (min-width: 767px) and (max-width: 991px) {
-    .voucher {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .voucher_card {
-        width: 80%;
-        height: auto;
-        padding: 20px;
-    }
-
-    .title_voucher {
-        font-size: 15px;
-        margin-right: 25px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-
-    }
-
-    .p_voucher {
-        font-size: 11px;
-        margin-right: 23px;
-        margin-top: -10px;
-    }
-
-    .button_detail {
-        padding: 3px 18px;
-        font-size: 11px;
-        margin-bottom: -15px;
-        margin-right: 20px;
-    }
+/* Tombol */
+.button_detail {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 4px 18px;
+  background-color: #fff;
+  color: #fbbcc8;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  transition: all 0.3s ease;
 }
 
-/* DESKTOP */
-@media (min-width: 992px) {
-    .voucher {
-        flex-direction: row;
-        justify-content: center;
-    }
+.button_detail:hover {
+  background-color: #ffe0e0;
+  color: #d94c4c;
+}
 
-    .voucher_card {
-        width: 350px;
-        height: 180px;
-        padding: 20px;
-    }
+/* Responsive Mobile */
+@media (max-width: 480px) {
+  .voucher_card {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+  }
 
-    .title_voucher1 {
-        font-size: 1.5rem;
-        margin-top: 50px;
-    }
+  .title_voucher {
+    font-size: 16px;
+  }
 
-    .p_voucher1 {
-        font-size: 1rem;
-    }
+  .p_voucher {
+    font-size: 12px;
+  }
 
-    .button_detail {
-        padding: 3px 20px;
-        font-size: 12px;
-    }
+  .button_detail {
+    font-size: 11px;
+    padding: 3px 14px;
+  }
 }

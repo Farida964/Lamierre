@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./detailproduct.module.css";
 import { Link } from "react-router-dom";
 
+
 function DetailProduct({ isOpen, onClose, product }) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [zoom, setZoom] = useState(false);

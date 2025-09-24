@@ -44,7 +44,6 @@ function Footer() {
         <div className={styles.paymentLogos}>
           <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa" />
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Paypal_2014_logo.png" alt="Paypal" />
         </div>
         <p className={styles.copy}>
           © {new Date().getFullYear()} <strong>L@mierrè</strong> - All rights reserved.
