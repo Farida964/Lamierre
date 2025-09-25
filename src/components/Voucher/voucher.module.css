@@ -23,6 +23,7 @@
   position: relative;
   transition: transform 0.3s ease;
   font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 
   /* bentuk tiket */
   clip-path: path("M0,20 Q0,0 20,0 H240 Q260,0 260,20 V40 Q250,50 260,60 V120 Q260,140 240,140 H20 Q0,140 0,120 V80 Q10,70 0,60 Z");
