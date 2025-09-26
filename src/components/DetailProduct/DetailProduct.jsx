@@ -60,7 +60,7 @@ function DetailProduct({ isOpen, onClose, product }) {
         <p className={styles.popupPrice}>Rp. {product.price}</p>
         <p className={styles.popupDetail}>{product.desc}</p>
         <div className={styles.buttonWrapper}>
-          <Link className={styles.button} to="/product">See More</Link>
+          <Link className={styles.button} to="/payment">See More</Link>
         </div>
       </div>
     </div>

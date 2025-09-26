@@ -4,6 +4,7 @@ import Hero from '../components/Hero.jsx/Hero';
 import Galeri from '../components/Galeri/Galeri';
 
 function Gallery() {
+  
   return (
     <div>
       <Navbar />

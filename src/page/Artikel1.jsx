@@ -34,6 +34,7 @@ function Artikel1() {
         <div className="container">
 
         <div className="art1">
+            <p>cobaa</p>
         </div>
 
         <div className="art2">

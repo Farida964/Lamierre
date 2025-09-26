@@ -1,14 +1,14 @@
 import styles from "./galeri.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
-// import Artikel1 from "../page/Artikel1";
+import { useNavigate } from "react-router-dom";
 
 function Galeri() {
   const [artikel, setArtikel] = useState([]);
   const [konten, setKonten] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Ambil artikel.json
     const fetchArtikel = async () => {
       try {
         const response = await axios.get("/artikel.json");
@@ -18,7 +18,6 @@ function Galeri() {
       }
     };
 
-    // Ambil konten.json
     const fetchKonten = async () => {
       try {
         const local = localStorage.getItem("konten");
@@ -37,6 +36,17 @@ function Galeri() {
     fetchKonten();
   }, []);
 
+  // === fungsi helper untuk redirect sesuai JSON ===
+  const handleNavigate = (kontenValue) => {
+    if (kontenValue.startsWith("http")) {
+      // kalau isinya URL (Instagram, dll)
+      window.open(kontenValue, "_blank");
+    } else {
+      // kalau internal route (misalnya /artikel1, artikel2, dst)
+      navigate(kontenValue.startsWith("/") ? kontenValue : `/${kontenValue}`);
+    }
+  };
+
   return (
     <div className={styles.container}>
       {/* Banner */}
@@ -53,13 +63,14 @@ function Galeri() {
             src={artikel[0].img}
             alt="Artikel Atas"
             className={styles.artikelImg}
-            onClick={() => window.open('/artikel1', '_self')}
+            onClick={() => navigate("/artikel1")}
             style={{ cursor: "pointer" }}
           />
           <p className={styles.artikelDesc}>{artikel[0].desc}</p>
         </div>
       )}
 
+      {/* ====== Konten Bawah ====== */}
       <div className={styles.bottomRow}>
         {konten.slice(0, 4).map((item, index) => (
           <div key={index} className={styles.card}>
@@ -67,7 +78,7 @@ function Galeri() {
               src={item.img}
               alt={item.title}
               className={styles.media}
-              onClick={() => window.open(item.video, "_blank")}
+              onClick={() => handleNavigate(item.konten)} 
               style={{ cursor: "pointer" }}
             />
             <h3 className={styles.title}>{item.title}</h3>
@@ -76,17 +87,8 @@ function Galeri() {
         ))}
       </div>
 
-      {/* ====== Artikel Bawah (index 1) ====== */}
-      {artikel.length > 1 && (
-        <div className={styles.topRow}>
-          <img
-            src={artikel[1].img}
-            alt="Artikel Bawah"
-            className={styles.artikelImg}
-          />
-          <p className={styles.artikelDesc}>{artikel[1].desc}</p>
-        </div>
-      )}
+    
+    
     </div>
   );
 }

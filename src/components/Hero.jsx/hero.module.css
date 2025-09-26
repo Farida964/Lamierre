@@ -14,12 +14,16 @@
 /* Mobile (≤757px) */
 @media (max-width: 757px) {
   .hero {
+    background-image: url('/4.png');
+    background-size: cover;
     padding: 30px 20px;   /* lebih sempit biar muat di layar kecil */
     margin-left: 0;
     margin-top: -50px;
     height: 200px;        /* lebih pendek */
     max-width: 100%;      /* biar full lebar */
     border-radius: 12px;  /* opsional biar rapi */
+     background-position: center;    /* fokus tengah */
+    background-repeat: no-repeat;  
   }
 }
 

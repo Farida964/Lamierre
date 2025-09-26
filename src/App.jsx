@@ -11,6 +11,8 @@ import Gallery from './page/Gallery';
 import Review from './page/Review';
 import Product from './page/Product';
 import Artikel1 from "./page/Artikel1";
+import Artikel2 from "./page/Artikel2";
+import Artikel3 from "./page/Artikel3";
 import Payment from './page/Payment';
 
 
@@ -29,6 +31,8 @@ function App() {
       <Route path="/review" element={<Review />} />
       <Route path="/product" element={<Product />} />
       <Route path="/artikel1" element={<Artikel1 />} />
+      <Route path="/artikel2" element={<Artikel2 />} />
+      <Route path="/artikel3" element={<Artikel3 />} />
       <Route path="/payment" element={<Payment />} />
     </Routes>
     
