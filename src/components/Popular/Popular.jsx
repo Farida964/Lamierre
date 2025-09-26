@@ -1,4 +1,4 @@
-import styles from "./Popular.module.css";
+import styles from "./popular.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
