@@ -10,7 +10,7 @@
 .voucher_card {
   width: 260px;
   height: 140px;
-  background-color: #fbbcc8;
+  background-color: #F1CFC6;
   color: #fff;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -54,7 +54,7 @@
   margin-bottom: 10px;
   padding: 4px 18px;
   background-color: #fff;
-  color: #fbbcc8;
+  color: #F1CFC6;
   border: none;
   border-radius: 20px;
   cursor: pointer;

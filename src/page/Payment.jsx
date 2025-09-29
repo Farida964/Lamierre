@@ -62,14 +62,6 @@ function Payment() {
         >
           Tokopedia
         </a>
-
-        {/* Kantung Belanja (dummy) */}
-        <button
-          style={styles.button}
-          onClick={() => alert("Produk dimasukkan ke kantung belanja!")}
-        >
-          Kantung Belanja
-        </button>
       </div>
     </div>
   );

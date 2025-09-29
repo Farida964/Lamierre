@@ -2,49 +2,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
+  margin: 20px auto;
+  max-width: 100%;
+  padding: 0 10px;
 }
 
 .bannerLeft,
 .bannerRight {
   flex: 1;
+  min-width: 30px;          /* tambahkan min-width supaya tidak hilang */
   height: 40px;
-  background-color: #fbbcc8; 
+  background-color: #F1CFC6; 
 }
 
 .bannerLeft {
-    border-radius: 40px 5px 40px 5px ;
+  border-radius: 40px 5px 40px 5px;
 }
 
 .bannerRight {
-    border-radius: 5px 40px 5px 40px ;
+  border-radius: 5px 40px 5px 40px;
 }
 
 .text {
   font-weight: bold;
   margin: 0 15px;
   white-space: nowrap;
+  font-size: 1.2rem;
 }
 
+
 .cardWrapper {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;                 /* jarak antar card */
+  margin: 30px auto;         /* jarak luar */
+  padding: 0 20px;           /* beri ruang kiri-kanan */
+  justify-items: center;   /* card rata tengah */
 }
 
 .card {
-  background: #fbbcc8;
+  background: #F1CFC6;
   border-radius: 20px 20px 130px 130px;
-  width: 200px;
+  width: 100%;
+  max-width: 220px;          /* lebih lega dari 200px */
   padding: 15px;
   text-align: center;
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .card:hover {
@@ -65,7 +71,7 @@
 
 .button_detail {
   margin-top: 10px;
-  background: #f5a5a5;
+  background: #E1B3A3;
   color: #FFFFFF;
   border: none;
   padding: 2px 20px;
@@ -197,4 +203,81 @@
 .button:active {
   color: #ffffff;        /* tetap putih */
   text-decoration: none; /* jangan muncul garis bawah */
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .bannerLeft,
+  .bannerRight {
+    height: 30px;
+    min-width: 20px;         /* tetap muncul */
+  }
+
+  .text {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(3, 1fr); /* max 3 per baris */
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .card {
+    max-width: 180px; /* sedikit lebih kecil */
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .bannerWrapper {
+    justify-content: space-between; /* biar kiri dan kanan tetap kelihatan */
+  }
+
+  .bannerLeft,
+  .bannerRight {
+    height: 20px;
+    min-width: 15px;         /* jangan biarkan hilang */
+  }
+
+  .text {
+    font-size: 0.9rem;
+    margin: 0 8px;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 10px;
+  }
+
+  .card {
+    max-width: 160px;
+    padding: 10px;
+  }
+}
+
+/* HP sangat kecil (>=320px) */
+@media (max-width: 320px) {
+  .bannerLeft,
+  .bannerRight {
+    min-width: 10px;         /* ukuran minimal sekali */
+    height: 15px;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    text-align: center;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  .card {
+    max-width: 140px;
+    padding: 8px;
+  }
 }
