@@ -99,16 +99,16 @@
 
 .button {
   display: inline-block;
-  background: #457b9d;
+ background: #E1B3A3;
   color: white;
   padding: 8px 16px;
-  border-radius: 8px;
+  border-radius: 20px;
   text-decoration: none;
   transition: background 0.2s ease;
 }
 
 .button:hover {
-  background: #356179;
+  background: #e4a089;
 }
 
 /* Animasi */

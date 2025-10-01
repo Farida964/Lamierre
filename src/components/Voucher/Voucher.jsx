@@ -17,7 +17,7 @@ function Voucher() {
       } else {
         try {
           const response = await axios.get("/voucher.json");
-          setDatas(response.data.slice(0, 3));
+          setDatas(response.data.slice(0, 1));
         } catch (error) {
           console.error("Error fetching data:", error);
         }

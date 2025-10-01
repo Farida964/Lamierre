@@ -19,8 +19,9 @@
 .bannerLeft,
 .bannerRight {
   flex: 1;
+  min-width: 30px;          /* tambahkan min-width supaya tidak hilang */
   height: 40px;
-  background-color: #F1CFC6;
+  background-color: #F1CFC6; 
 }
 
 .bannerLeft {
@@ -51,11 +52,11 @@
 
 .artikelImg {
   flex: 1 1 250px;
-  max-width: 320px;
-  border-radius: 15px;
+  max-width: 400px;
+  border-radius: 40px 5px 40px 5px;
+  border: 3px solid #c97a7a; /* stroke */
   object-fit: cover;
-  background-color: #f9dede;
-  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .artikelDesc {
@@ -65,7 +66,7 @@
   color: #333;
   background-color: #f9dede;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 30px 0 30px 0;
 }
 
 /* ===== BARIS BAWAH ===== */
@@ -109,23 +110,30 @@
 /* ===== RESPONSIVE BREAKPOINTS ===== */
 
 /* Mobile ≤757px */
+/* Mobile ≤757px */
 @media (max-width: 757px) {
   .topRow {
-    flex-direction: column;
-    gap: 20px;
-    padding: 15px;
-    text-align: center;
+    display: flex;
+    flex-direction: row;   /* arah horizontal */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
   }
 
   .artikelImg {
-    max-width: 100%;
-    padding: 8px;
+    flex: 1 1 40%;         /* gambar di kiri, ambil 40% lebar */
+    max-width: 45%;
+    width: 100%;
+    padding: 5px;
   }
 
   .artikelDesc {
-    font-size: 14px;
-    padding: 15px;
+    flex: 1 1 60%;         /* deskripsi di kanan, ambil sisa ruang */
+    font-size: 13px;
     line-height: 1.4;
+    padding: 10px;
+    text-align: left;
   }
 
   .media {
@@ -141,13 +149,13 @@
   }
 }
 
+
 /* Tablet 768px - 991px */
 @media (min-width: 768px) and (max-width: 991px) {
   .topRow {
     gap: 30px;
     padding: 18px;
   }
-
   .artikelImg {
     max-width: 260px;
   }
@@ -196,5 +204,31 @@
 
   .subtitle {
     font-size: 14px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .bannerLeft,
+  .bannerRight {
+    height: 30px;     /* lebih pendek di tablet */
+    min-width: 20px;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .bannerLeft,
+  .bannerRight {
+    height: 20px;     /* lebih kecil di mobile */
+    min-width: 15px;
+  }
+
+  .text {
+    font-size: 16px;
   }
 }

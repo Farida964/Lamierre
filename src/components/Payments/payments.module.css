@@ -1,0 +1,84 @@
+/* payments.module.css */
+
+.container {
+  max-width: 700px;
+  margin: 60px auto;
+  padding: 40px 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+}
+
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* button utama */
+.button {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+  min-width: 140px;
+  text-align: center;
+}
+
+/* efek hover */
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  opacity: 0.95;
+  color: #fff;
+}
+
+/* WhatsApp warna hijau */
+.button[href*="wa.me"] {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+}
+
+/* Shopee warna oranye */
+.button[href*="shopee"] {
+  background: linear-gradient(135deg, #ff7f50, #ff4500);
+}
+
+/* Tokopedia warna hijau tosca */
+.button[href*="tokopedia"] {
+  background: linear-gradient(135deg, #00b894, #019874);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 30px 16px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 12px 20px;
+    min-width: 120px;
+  }
+}

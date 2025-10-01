@@ -1,0 +1,186 @@
+/* artikel1.module.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  color: #333;
+}
+
+/* Tombol back */
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.button02 {
+background-color: #c97a7a;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.button  {
+  background-color: #c97a7a;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 0 40px 40px 40px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+.button:hover, .button02:hover {
+  background-color: #a05f5f;
+  color: #fff;
+}
+
+/* Banner (gambar + teks) */
+.bannerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  max-width: 1000px;
+}
+
+/* Gambar kiri */
+.imgkiri {
+  max-width: 400px;
+  border-radius: 40px 5px 40px 5px;
+  border: 3px solid #c97a7a; /* stroke */
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Teks kanan */
+.textkanan {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #222;
+  margin-top: -100px;
+  text-align: left;
+}
+
+.isi {
+  background-color: #f3b7b7;
+  padding: 15px;
+  border-radius: 40px 0 40px 0;
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: justify;
+  margin-top: -10px;
+}
+
+/* Detail / inspirasi */
+.detail {
+  display: block;
+  background-color: #f3b7b7;
+  padding: 18px;
+  border-radius: 30px 0 30px 0;
+  line-height: 1.6;
+  font-size: 15px;
+  margin: 15px 0;
+  max-width: 800px;
+  text-align: justify;
+}
+
+/* Wrapper default untuk back button */
+.buttonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+/* Wrapper untuk tombol Product di kanan */
+.buttonWrapperRight {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;  /* kanan */
+  margin-top: 20px;
+}
+
+/* =================== Responsive =================== */
+
+@media (max-width: 992px) {
+  .bannerWrapper {
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .isi, .detail {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .imgkiri {
+    max-width: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bannerWrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+  .title {
+    margin-top: -10px;
+  }
+  .detail {
+    margin-top: -10px;
+  }
+
+  .imgkiri {
+    max-width: 200px;
+  }
+
+  .textkanan {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+
+  .isi {
+    font-size: 8px;
+    padding: 8px;
+    padding: 18px;
+  }
+  .detail {
+    font-size: 8px;
+    padding: 8px;
+    padding: 18px;
+    margin-top: -20px;
+  }
+
+  .button, .button02 {
+    font-size: 13px;
+    padding: 6px 16px;
+  }
+}

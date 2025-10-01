@@ -2,49 +2,55 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px 0;
+  margin: 20px auto;
+  max-width: 100%;
+  padding: 0 10px;
 }
 
 .bannerLeft,
 .bannerRight {
   flex: 1;
+  min-width: 30px;          /* tambahkan min-width supaya tidak hilang */
   height: 40px;
-  background-color: #F1CFC6; /* warna merah sesuai gambar */
+  background-color: #F1CFC6; 
 }
 
 .bannerLeft {
-    border-radius: 40px 5px 40px 5px ;
+  border-radius: 40px 5px 40px 5px;
 }
 
 .bannerRight {
-    border-radius: 5px 40px 5px 40px ;
+  border-radius: 5px 40px 5px 40px;
 }
 
 .text {
   font-weight: bold;
   margin: 0 15px;
   white-space: nowrap;
+  font-size: 1.2rem;
 }
 
+
 .cardWrapper {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;                 
+  margin: 40px auto;
+  padding: 0 20px;
+  justify-items: center;
 }
 
 .card {
   background: #F1CFC6;
   border-radius: 20px 20px 130px 130px;
-  width: 200px;
-  padding: 15px;
+  width: 220px;
+  max-width: 100%;          
+  padding: 20px;
   text-align: center;
   transition: transform 0.2s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .card:hover {
@@ -53,35 +59,38 @@
 
 .image {
   width: 100%;
-  height: 200px;
+  max-height: 220px;
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
 }
+
 .title {
   background-color: #FFFFFF;
   border-radius: 30px;
-  padding: 5px 10px;
+  padding: 6px 12px;
+  font-size: 1rem;
 }
 
 .button_detail {
   margin-top: 10px;
   background: #E1B3A3;
-  color: #fff;
+  color: #FFFFFF;
   border: none;
-  padding: 2px 20px;
+  padding: 6px 22px;
   border-radius: 25px;
   cursor: pointer;
   margin-bottom: 8px;
+  font-size: 0.9rem;
 }
 
 .price {
-  margin-top: 8px;
+  margin-top: 5px;
   font-weight: bold;
-  color: #fff;
-  padding: 5px 10px;
+  color: #FFFFFF;
+  padding: 6px 12px;
   border-radius: 12px;
-  display: inline-block;
-  margin-top: 0;
+  font-size: 0.9rem;
 }
 
 /* POPUP */
@@ -99,7 +108,7 @@
 }
 
 .popup {
-  background: #fff;
+  background: #FFFFFF;
   border-radius: 15px;
   padding: 20px;
   width: 450px;
@@ -146,7 +155,7 @@
   transform: translateY(-50%);
   background: rgba(0,0,0,0.5);
   border: none;
-  color: white;
+  color: #FFFFFF;
   font-size: 24px;
   cursor: pointer;
   padding: 5px 10px;
@@ -174,4 +183,240 @@
 
 .popular-section {
   margin-bottom: 50px; 
+}
+
+.buttonWrapper {
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+.buttonWrapper button {
+  background-color: #CB6E68;
+  color:#ffffff;
+  border-radius: 80px;
+}
+.button {
+  color: #ffffff;     /* warna teks putih */
+  text-decoration: none; /* hilangkan underline */
+  display: inline-block; 
+  padding: 5px 30px;
+}
+.button:hover,
+.button:visited,
+.button:active {
+  color: #ffffff;        /* tetap putih */
+  text-decoration: none; /* jangan muncul garis bawah */
+}
+
+
+/* Tablet */
+@media (max-width: 768px) {
+  .bannerLeft,
+  .bannerRight {
+    height: 40px;
+    min-width: 30px;         /* tetap muncul */
+  }
+
+  .text {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+  .cardWrapper {
+   grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .card {
+    max-width: 200px;
+    min-width: 100px;
+    width: 130px;
+    height: 310px;
+    padding: 15px;
+  }
+   .image {
+    height: 180px;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.85rem;
+    margin-top: -10px;
+  }
+}
+
+/* Mobile */
+@media (min-width: 349px) and (max-width: 585px) {
+  .bannerWrapper {
+    justify-content: space-between; 
+  }
+
+  .bannerLeft,
+  .bannerRight {
+    min-width: 40px;         /* ukuran minimal sekali */
+    height: 30px;      
+  }
+
+  .text {
+    font-size: 0.9rem;
+    margin: 0 8px;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 12px;
+  }
+
+  .card {
+    max-width: 160px;
+    padding: 12px;
+    gap: 1px;
+  }
+
+  .image {
+    height: 150px;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.8rem;
+  }
+}
+
+/* HP sangat kecil (>=320px) */
+@media (max-width: 320px) {
+  .bannerLeft,
+  .bannerRight {
+    min-width: 30px;         /* ukuran minimal sekali */
+    height: 20px;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    text-align: center;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .card {
+    max-width: 100px;
+    height: 200px;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .title {
+    font-size: 0.6rem;
+    margin-top: -2px;
+
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.75rem;
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 348px) {
+  .bannerLeft,
+  .bannerRight {
+    min-width: 30px;         /* ukuran minimal sekali */
+    height: 20px;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    text-align: center;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .card {
+    max-width: 200px;
+    width: 100px;
+    height: 200px;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .title {
+    font-size: 0.6rem;
+    margin-top: -2px;
+
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.75rem;
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: 349px) and (max-width: 450px) {
+  .bannerLeft,
+  .bannerRight {
+    min-width: 30px;         /* ukuran minimal sekali */
+    height: 20px;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    text-align: center;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .card {
+    max-width: 350px;
+    width: 120px;
+    height: 200px;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .title {
+    font-size: 0.6rem;
+    margin-top: -2px;
+
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.75rem;
+    margin-top: -10px;
+  }
 }

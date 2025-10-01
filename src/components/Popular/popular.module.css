@@ -43,8 +43,8 @@
 .card {
   background: #F1CFC6;
   border-radius: 20px 20px 130px 130px;
-  width: 100%;
-  max-width: 250px;          
+  width: 220px;
+  max-width: 100%;          
   padding: 20px;
   text-align: center;
   transition: transform 0.2s;
@@ -59,7 +59,8 @@
 
 .image {
   width: 100%;
-  height: 220px;
+  max-height: 220px;
+  height: auto;
   object-fit: cover;
   border-radius: 15px;
 }
@@ -212,8 +213,8 @@
 @media (max-width: 768px) {
   .bannerLeft,
   .bannerRight {
-    height: 30px;
-    min-width: 20px;         /* tetap muncul */
+    height: 40px;
+    min-width: 30px;         /* tetap muncul */
   }
 
   .text {
@@ -256,8 +257,8 @@
 
   .bannerLeft,
   .bannerRight {
-    height: 20px;
-    min-width: 15px;       
+   min-width: 40px;         /* ukuran minimal sekali */
+    height: 30px;       
   }
 
   .text {
@@ -295,8 +296,8 @@
 @media (max-width: 320px) {
   .bannerLeft,
   .bannerRight {
-    min-width: 10px;         /* ukuran minimal sekali */
-    height: 15px;
+   min-width: 30px;         /* ukuran minimal sekali */
+    height: 20px;
   }
 
   .text {
@@ -337,8 +338,8 @@
 @media (min-width: 320px) and (max-width: 348px) {
   .bannerLeft,
   .bannerRight {
-    min-width: 10px;         /* ukuran minimal sekali */
-    height: 15px;
+    min-width: 30px;         /* ukuran minimal sekali */
+    height: 20px;
   }
 
   .text {
@@ -380,8 +381,8 @@
 @media (min-width: 349px) and (max-width: 450px) {
   .bannerLeft,
   .bannerRight {
-    min-width: 10px;         /* ukuran minimal sekali */
-    height: 15px;
+    min-width: 30px;         /* ukuran minimal sekali */
+    height: 20px;
   }
 
   .text {
@@ -419,4 +420,3 @@
     margin-top: -10px;
   }
 }
-
