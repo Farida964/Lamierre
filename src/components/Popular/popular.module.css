@@ -34,18 +34,18 @@
 .cardWrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;                 /* jarak antar card */
-  margin: 30px auto;         /* jarak luar */
-  padding: 0 20px;           /* beri ruang kiri-kanan */
-  justify-items: center;   /* card rata tengah */
+  gap: 30px;                 
+  margin: 40px auto;
+  padding: 0 20px;
+  justify-items: center;
 }
 
 .card {
   background: #F1CFC6;
   border-radius: 20px 20px 130px 130px;
   width: 100%;
-  max-width: 220px;          /* lebih lega dari 200px */
-  padding: 15px;
+  max-width: 250px;          
+  padding: 20px;
   text-align: center;
   transition: transform 0.2s;
   display: flex;
@@ -59,14 +59,16 @@
 
 .image {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
   border-radius: 15px;
 }
+
 .title {
   background-color: #FFFFFF;
   border-radius: 30px;
-  padding: 5px 10px;
+  padding: 6px 12px;
+  font-size: 1rem;
 }
 
 .button_detail {
@@ -74,20 +76,20 @@
   background: #E1B3A3;
   color: #FFFFFF;
   border: none;
-  padding: 2px 20px;
+  padding: 6px 22px;
   border-radius: 25px;
   cursor: pointer;
   margin-bottom: 8px;
+  font-size: 0.9rem;
 }
 
 .price {
-  margin-top: 8px;
+  margin-top: 5px;
   font-weight: bold;
   color: #FFFFFF;
-  padding: 5px 10px;
+  padding: 6px 12px;
   border-radius: 12px;
-  display: inline-block;
-  margin-top: 0;
+  font-size: 0.9rem;
 }
 
 /* POPUP */
@@ -219,26 +221,43 @@
     margin: 0 10px;
   }
   .cardWrapper {
-    grid-template-columns: repeat(3, 1fr); /* max 3 per baris */
-    gap: 15px;
+   grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
     padding: 0 15px;
   }
 
   .card {
-    max-width: 180px; /* sedikit lebih kecil */
+    max-width: 200px;
+    min-width: 100px;
+    width: 130px;
+    height: 310px;
+    padding: 15px;
+  }
+   .image {
+    height: 180px;
+  }
+
+  .title {
+    font-size: 0.95rem;
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.85rem;
+    margin-top: -10px;
   }
 }
 
 /* Mobile */
-@media (max-width: 480px) {
+@media (min-width: 349px) and (max-width: 585px) {
   .bannerWrapper {
-    justify-content: space-between; /* biar kiri dan kanan tetap kelihatan */
+    justify-content: space-between; 
   }
 
   .bannerLeft,
   .bannerRight {
     height: 20px;
-    min-width: 15px;         /* jangan biarkan hilang */
+    min-width: 15px;       
   }
 
   .text {
@@ -247,13 +266,28 @@
   }
   .cardWrapper {
     grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-    padding: 0 10px;
+    gap: 15px;
+    padding: 0 12px;
   }
 
   .card {
     max-width: 160px;
-    padding: 10px;
+    padding: 12px;
+    gap: 1px;
+  }
+
+  .image {
+    height: 150px;
+  }
+
+  .title {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.8rem;
   }
 }
 
@@ -273,11 +307,116 @@
   .cardWrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    padding: 0 5px;
+    padding: 0 8px;
   }
 
   .card {
-    max-width: 140px;
-    padding: 8px;
+    max-width: 100px;
+    height: 200px;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .title {
+    font-size: 0.6rem;
+    margin-top: -2px;
+
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.75rem;
+    margin-top: -10px;
   }
 }
+
+@media (min-width: 320px) and (max-width: 348px) {
+  .bannerLeft,
+  .bannerRight {
+    min-width: 10px;         /* ukuran minimal sekali */
+    height: 15px;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    text-align: center;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .card {
+    max-width: 200px;
+    width: 100px;
+    height: 200px;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .title {
+    font-size: 0.6rem;
+    margin-top: -2px;
+
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.75rem;
+    margin-top: -10px;
+  }
+}
+
+@media (min-width: 349px) and (max-width: 450px) {
+  .bannerLeft,
+  .bannerRight {
+    min-width: 10px;         /* ukuran minimal sekali */
+    height: 15px;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    margin: 0 5px;
+    text-align: center;
+  }
+  .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .card {
+    max-width: 350px;
+    width: 120px;
+    height: 200px;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .image {
+    height: 100px;
+  }
+
+  .title {
+    font-size: 0.6rem;
+    margin-top: -2px;
+
+  }
+
+  .button_detail,
+  .price {
+    font-size: 0.75rem;
+    margin-top: -10px;
+  }
+}
+
