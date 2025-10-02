@@ -21,14 +21,6 @@ function Payments() {
         >
           Shopee
         </a>
-        <a
-          href="https://tokopedia.com/Lamierre"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.button}
-        >
-          Tokopedia
-        </a>
       </div>
     </div>
   );
