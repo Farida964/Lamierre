@@ -1,7 +1,7 @@
-import Hero from '../components/Hero.jsx/Hero';
+import Hero from '../components/Hero/Hero';
 import Navbar from '../components/Navbar/Navbar';
-import Popular from '../components/Popular/Popular';
-import Voucher from '../components/Voucher/Voucher';
+import Popular from '../components/Home/Popular/Popular';
+import Voucher from '../components/Home/Voucher/Voucher';
 import Footer from '../components/Footer/Footer';
 
 

@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import Hero from '../components/Hero.jsx/Hero';
-import Products from "../components/Products/Products";
+import Hero from '../components/Hero/Hero';
+import Products from "../components/Product/Products/Products";
 
 function Product() {
 

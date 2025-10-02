@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import Hero from '../components/Hero.jsx/Hero';
-import Payments from "../components/Payments/Payments";
+import Hero from '../components/Hero/Hero';
+import Payments from "../components/Product/Payments/Payments";
 
 
 

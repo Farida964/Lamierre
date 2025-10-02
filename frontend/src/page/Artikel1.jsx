@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import Hero from '../components/Hero.jsx/Hero';
-import Artikel01 from "../components/Artikel01/Artikel01";
+import Hero from '../components/Hero/Hero';
+import Artikel01 from "../components/Artikel/Artikel01/Artikel01";
 
 function Artikel1() {
     return (

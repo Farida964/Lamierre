@@ -2,7 +2,6 @@ import styles from "./galeri.module.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Artikel1 from "../Artikel01/Artikel01";
 
 function Galeri() {
   const [artikel, setArtikel] = useState([]);
