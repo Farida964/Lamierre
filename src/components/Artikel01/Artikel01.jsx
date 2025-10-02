@@ -8,7 +8,7 @@ function Artikel01() {
                       <Link className={styles.button} to="/gallery">Back</Link>
                     </div>
             <div className={styles.bannerWrapper}>
-                <img src="/Aqdisha_TN.png" alt="Aqdisha" className={styles.imgkiri}/>
+                <img src="/artikel aqdisha.png" alt="Aqdisha" className={styles.imgkiri}/>
 
                 <div className={styles.textkanan}>
                     <h2 className={styles.title}>AQDISHA</h2>

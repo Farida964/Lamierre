@@ -1,5 +1,5 @@
 .footer {
-  background: #F1CFC6;
+  background: #fff5f7;
   padding: 50px 20px;
   font-size: 14px;
   color: #555;
@@ -41,7 +41,7 @@
 }
 
 .footer a:hover {
-  color: #e91e63;
+  color: #b23a48;
 }
 .socials {
   display: flex;

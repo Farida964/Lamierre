@@ -1,11 +1,17 @@
 [
-    {"id" : "1" , "title" : "Aqdisha Pink", "price" : "225.000", "imgs" : ["/AQDISHA 1.jpg", "/AQDISHA 2.jpg", "/AQDISHA 3.jpg"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
-    {"id" : "2" , "title" : "Aqdisha Grey", "price" : "225.000", "imgs" : ["/AQDISHA 2.jpg", "/AQDISHA 1.jpg", "/AQDISHA 3.jpg"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
-    {"id" : "3" , "title" : "Aqdisha Blue", "price" : "225.000", "imgs" : ["/AQDISHA 3.jpg", "/AQDISHA 1.jpg", "/AQDISHA 2.jpg"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
-    {"id" : "4" , "title" : "Syameera Blue01", "price" : "225.000", "imgs" : ["/SYAMEERA 1.jpg", "/SYAMEERA 2.jpg", "/SYAMEERA 3.jpg"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
-    {"id" : "5" , "title" : "Syameera Blue02", "price" : "225.000", "imgs" : ["/SYAMEERA 2.jpg", "/SYAMEERA 1.jpg", "/SYAMEERA 3.jpg"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
-    {"id" : "6" , "title" : "Syameera Maroon", "price" : "225.000", "imgs" : ["/SYAMEERA 3.jpg", "/SYAMEERA 2.jpg", "/SYAMEERA 1.jpg"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
-    {"id" : "7" , "title" : "Ayubi Maroon", "price" : "225.000", "imgs" : ["/AYUBI 1.jpg", "/AYUBI 2.jpg", "/AYUBI 3.jpg"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
-    {"id" : "7" , "title" : "Ayubi Grey",  "price" : "225.000", "imgs" : ["/AYUBI 2.jpg", "/AYUBI 1.jpg", "/AYUBI 3.jpg"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
-    {"id" : "7" , "title" : "Ayubi Pink", "price" : "225.000", "imgs" : ["/AYUBI 3.jpg", "/AYUBI 2.jpg", "/AYUBI 1.jpg"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"}
+    {"id" : "1" , "title" : "Aqdisha Dusty Pink", "price" : "225.000", "imgs" : ["/aqdisha dusty.png", "/model aqdisha dusty.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina", "isPopular": true},
+    {"id" : "2" , "title" : "Aqdisha Grey", "price" : "225.000", "imgs" : ["/aqdisha grey.png", "/model aqdisha grey.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina", "isPopular": true},
+    {"id" : "3" , "title" : "Aqdisha Sage", "price" : "225.000", "imgs" : ["/aqdisha sage.png", "/aqdisha"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
+    {"id" : "4" , "title" : "Aqdisha Tosca", "price" : "225.000", "imgs" : ["/aqdisha tosca.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
+    {"id" : "5" , "title" : "Aqdisha Nude", "price" : "225.000", "imgs" : ["/aqdisha nude.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
+    {"id" : "6" , "title" : "Syameera Blue", "price" : "225.000", "imgs" : ["/syameera blue.png", "/model syameera blue.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
+    {"id" : "7" , "title" : "Syameera Maroon", "price" : "225.000", "imgs" : ["/syameera maroon.png", "/model syameera maroon.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina", "isPopular": true},
+    {"id" : "8" , "title" : "Syameera Tosca", "price" : "225.000", "imgs" : ["/syameera tosca.png", "/model syameera tosca.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
+    {"id" : "9" , "title" : "Syameera Sage", "price" : "225.000", "imgs" : ["/syameera sage.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina", "isPopular": true},
+    {"id" : "10" , "title" : "Syameera Dusty Pink", "price" : "225.000", "imgs" : ["/syameera dusty.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina", "isPopular": true},
+    {"id" : "11" , "title" : "Ayubi Maroon", "price" : "225.000", "imgs" : ["/ayubi maroon.png", "/model ayubi maroon.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina", "isPopular": true},
+    {"id" : "12" , "title" : "Ayubi Krem",  "price" : "225.000", "imgs" : ["/ayubi krem.png", "/model ayubi krem.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina", "isPopular": true},
+    {"id" : "13" , "title" : "Ayubi Dusty Pink", "price" : "225.000", "imgs" : ["/ayubi dusty.png", "/model ayubi dusty.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
+     {"id" : "14" , "title" : "Ayubi Tosca", "price" : "225.000", "imgs" : ["/ayubi tosca.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina"},
+      {"id" : "15" , "title" : "Ayubi Kuning", "price" : "225.000", "imgs" : ["ayubi kuning.png"], "desc" : "Jilbab Segi Empat dengan bahan Ultrafine Tryspan", "Kategori" : "Series Palestina", "isPopular": true}
 ]

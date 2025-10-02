@@ -13,11 +13,11 @@ function Popular() {
     const fetchData = async () => {
       const local = localStorage.getItem("product");
       if (local) {
-        setProducts(JSON.parse(local).slice(0, 4));
+        setProducts(JSON.parse(local));
       } else {
         try {
           const response = await axios.get("/product.json");
-          setProducts(response.data.slice(0, 8));
+          setProducts(response.data);
         } catch (error) {
           console.error("Error fetching data:", error);
         }
@@ -34,6 +34,9 @@ function Popular() {
     setSelectedProduct(null); // tutup popup
   };
 
+  const popularIds = ["1", "2", "7", "9", "10", "11", "12", "15"];
+  const popularProducts = products.filter(item => popularIds.includes(item.id));
+
   return (
     <div>
       <div className={styles.bannerWrapper}>
@@ -43,7 +46,7 @@ function Popular() {
       </div>
 
       <div className={styles.cardWrapper}>
-        {products.map((item) => (
+        {popularProducts.map((item) => (
           <div className={styles.card} key={item.id}>
             <img
               src={item.imgs[0]}

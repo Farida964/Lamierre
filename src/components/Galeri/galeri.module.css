@@ -21,7 +21,7 @@
   flex: 1;
   min-width: 30px;          /* tambahkan min-width supaya tidak hilang */
   height: 40px;
-  background-color: #F1CFC6; 
+  background-color: #FADBD9; 
 }
 
 .bannerLeft {
@@ -36,6 +36,8 @@
   font-weight: bold;
   margin: 0 15px;
   white-space: nowrap;
+  font-size: 1.3rem;
+  font-family: 'Narnia', serif;
 }
 
 /* ===== BARIS ATAS ===== */

@@ -49,9 +49,9 @@
 }
 
 .navbar__item {
-  font-size: 14px;
-  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
-  font-weight: 500;
+  font-size: 17px;
+  font-family: 'Narnia', serif;
+  font-weight: 700;
   flex-shrink: 0;
 }
 

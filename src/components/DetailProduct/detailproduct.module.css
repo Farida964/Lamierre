@@ -76,12 +76,13 @@
   font-size: 20px;
   margin: 10px 0;
   font-weight: 600;
+  font-family: 'Narnia', serif;
 }
 
 .popupPrice {
   font-size: 18px;
   font-weight: bold;
-  color: #e63946;
+  color: #b23a48;
   margin-bottom: 10px;
 }
 
@@ -99,7 +100,7 @@
 
 .button {
   display: inline-block;
- background: #E1B3A3;
+ background: #b23a48;
   color: white;
   padding: 8px 16px;
   border-radius: 20px;
@@ -108,7 +109,7 @@
 }
 
 .button:hover {
-  background: #e4a089;
+  background: #b23a48;
 }
 
 /* Animasi */

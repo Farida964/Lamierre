@@ -1,6 +1,6 @@
 [
-    {"id" : "1", "img": "/Aqdisha_TN.png", "title" : "Aqdisha", "sub_title" : "Cahaya dari Baitul Maqdis", "konten" : "/artikel1"},
-    {"id" : "2", "img": "/Ayubi_TN.png", "title" : "Ayubi", "sub_title" : "Jejak Sang Pembebas Al-Aqsha", "konten" : "/artikel2"},
-    {"id" : "3", "img": "/Syameera_TN.png", "title" : "Syameera", "sub_title" : "Keberkahan Syam yang Menginspirasi", "konten" : "/artikel3"},
-    {"id" : "4", "img": "/2.png", "title" : "Mix & Match", "sub_title" : "Show your vibe! Your style, your rules.", "konten" : "https://www.instagram.com/reel/DLHIc0ZTJZw/?igsh=OXU0bHRzNjBlZ29q"}
+    {"id" : "1", "img": "/artikel aqdisha.png", "title" : "Aqdisha", "sub_title" : "Cahaya dari Baitul Maqdis", "konten" : "/artikel1"},
+    {"id" : "2", "img": "/artikel ayubi.png", "title" : "Ayubi", "sub_title" : "Jejak Sang Pembebas Al-Aqsha", "konten" : "/artikel2"},
+    {"id" : "3", "img": "/artikel syameera.png", "title" : "Syameera", "sub_title" : "Keberkahan Syam yang Menginspirasi", "konten" : "/artikel3"},
+    {"id" : "4", "img": "/lamierre soft opening.jpg", "title" : "L@mierrè Soft Opening", "sub_title" : "Soft Opening At Muslimah Market", "konten" : "https://www.instagram.com/p/DPQEPPhgRPO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="}
 ]

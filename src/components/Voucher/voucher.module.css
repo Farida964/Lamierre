@@ -11,8 +11,8 @@
 .voucher_card {
   width: 260px;
   height: 140px;
-  background-color: #F1CFC6;
-  color: #fff;
+  background-color: #fff5f7;
+  color: #b23a48;
   border-radius: 16px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   display: flex;
@@ -23,8 +23,9 @@
   padding: 15px;
   position: relative;
   transition: transform 0.3s ease;
-  font-family: "Poppins", sans-serif;
+  font-family: "Narnia", sans-serif;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  
 
   /* bentuk tiket */
   clip-path: path("M0,20 Q0,0 20,0 H240 Q260,0 260,20 V40 Q250,50 260,60 V120 Q260,140 240,140 H20 Q0,140 0,120 V80 Q10,70 0,60 Z");
@@ -55,7 +56,7 @@
   margin-bottom: 10px;
   padding: 4px 18px;
   background-color: #fff;
-  color: #F1CFC6;
+  color: #b23a48;
   border: none;
   border-radius: 20px;
   cursor: pointer;

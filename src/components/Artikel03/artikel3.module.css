@@ -81,19 +81,20 @@ background-color: #c97a7a;
 }
 
 .isi {
-  background-color: #f3b7b7;
+  background-color: #fff5f7;
   padding: 15px;
   border-radius: 40px 0 40px 0;
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 15px;
   text-align: justify;
   margin-top: -10px;
+  font-family: 'Garamond', klassic, serif;
 }
 
 /* Detail / inspirasi */
 .detail {
   display: block;
-  background-color: #f3b7b7;
+  background-color: #fff5f7;
   padding: 18px;
   border-radius: 30px 0 30px 0;
   line-height: 1.6;
@@ -101,6 +102,7 @@ background-color: #c97a7a;
   margin: 15px 0;
   max-width: 800px;
   text-align: justify;
+  font-family: 'Garamond', klassic, serif;
 }
 
 /* Wrapper default untuk back button */
