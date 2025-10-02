@@ -60,11 +60,6 @@
   background: linear-gradient(135deg, #ff7f50, #ff4500);
 }
 
-/* Tokopedia warna hijau tosca */
-.button[href*="tokopedia"] {
-  background: linear-gradient(135deg, #00b894, #019874);
-}
-
 /* Responsive */
 @media (max-width: 600px) {
   .container {
