@@ -1,51 +1,78 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import Hero from '../components/Hero/Hero';
+import Hero from "../components/Hero/Hero";
 
 function Review() {
-  const [reviews, setReviews] = useState([
-    { name: "Ayu", text: "Kualitas kerudungnya bagus banget 💖", rating: 5 },
-    { name: "Siti", text: "Nyaman dipakai seharian, bahan adem!", rating: 4 },
-  ]);
-
+  const [reviews, setReviews] = useState([]);
   const [newReview, setNewReview] = useState("");
   const [rating, setRating] = useState(0);
 
-  const handleSubmit = (e) => {
+  // URL backend
+  const API_URL = "http://localhost:5000/api/reviews";
+
+  // Ambil data review dari backend
+  useEffect(() => {
+    fetchReviews();
+  }, []);
+
+  const fetchReviews = async () => {
+    try {
+      const res = await axios.get(API_URL);
+      setReviews(res.data);
+    } catch (err) {
+      console.error("Gagal ambil review:", err);
+    }
+  };
+
+  // Submit review baru
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!newReview.trim() || rating === 0) return;
 
-    setReviews([...reviews, { name: "Anonymous", text: newReview, rating }]);
-    setNewReview("");
-    setRating(0);
+    try {
+      await axios.post(API_URL, {
+        name: "Anonymous", // Bisa diganti input user
+        text: newReview,
+        rating,
+      });
+
+      // Refresh review list setelah submit
+      fetchReviews();
+      setNewReview("");
+      setRating(0);
+    } catch (err) {
+      console.error("Gagal kirim review:", err);
+    }
   };
 
   return (
     <div>
-      {/* Navbar */}
       <Navbar />
       <Hero />
 
-      {/* Main Container */}
       <div style={styles.container}>
-        {/* Review List Section */}
+        {/* Review List */}
         <section style={styles.reviewSection}>
           <h2 style={styles.sectionTitle}>What Our Clients Say About Us</h2>
           <div style={styles.reviewGrid}>
-            {reviews.map((r, index) => (
-              <div key={index} style={styles.reviewCard}>
-                <p style={styles.stars}>{"★".repeat(r.rating)}</p>
-                <p style={styles.text}>{r.text}</p>
-                <p style={styles.name}>- {r.name}</p>
-              </div>
-            ))}
+            {reviews.length > 0 ? (
+              reviews.map((r, index) => (
+                <div key={index} style={styles.reviewCard}>
+                  <p style={styles.stars}>{"★".repeat(r.rating)}</p>
+                  <p style={styles.text}>{r.text}</p>
+                  <p style={styles.name}>- {r.name}</p>
+                </div>
+              ))
+            ) : (
+              <p>Belum ada review.</p>
+            )}
           </div>
         </section>
 
-        {/* Add Review Section */}
+        {/* Add Review */}
         <section style={styles.addReview}>
-          {/* <button style={styles.backBtn}>← Back</button> */}
           <h3 style={styles.addTitle}>Apakah kamu puas dengan Lamierrè?</h3>
 
           {/* Rating */}
@@ -79,7 +106,6 @@ function Review() {
         </section>
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );
@@ -134,14 +160,6 @@ const styles = {
     boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
     maxWidth: "600px",
     margin: "0 auto",
-  },
-  backBtn: {
-    background: "#f4d6d9",
-    border: "none",
-    padding: "0.5rem 1rem",
-    borderRadius: "20px",
-    cursor: "pointer",
-    marginBottom: "1rem",
   },
   addTitle: {
     fontSize: "1.2rem",
