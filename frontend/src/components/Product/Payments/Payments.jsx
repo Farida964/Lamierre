@@ -14,7 +14,7 @@ function Payments() {
           WhatsApp
         </a>
         <a
-          href="https://shopee.co.id/lamierre"
+          href="https://shopee.co.id/ail_9_hil2"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.button}
