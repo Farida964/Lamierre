@@ -29,7 +29,7 @@ function Footer() {
             <a href="https://www.tiktok.com/@lamierre.id" target="_blank" rel="noreferrer">
               <img src="https://cdn-icons-png.flaticon.com/512/3046/3046120.png" alt="TikTok" />
             </a>
-            <a href="https://wa.me/6285210080013" target="_blank" rel="noreferrer">
+            <a href="https://wa.me/628111121831" target="_blank" rel="noreferrer">
               <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
             </a>
           </div>
