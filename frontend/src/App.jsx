@@ -30,9 +30,9 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/review" element={<Review />} />
         <Route path="/product" element={<Product />} />
-        <Route path="/artikel1" element={<Artikel1 />} />
-        <Route path="/artikel2" element={<Artikel2 />} />
-        <Route path="/artikel3" element={<Artikel3 />} />
+       <Route path="/artikel/aqdisha" element={<Artikel1 />} /> 
+       <Route path="/artikel/ayubi" element={<Artikel2 />} /> 
+       <Route path="/artikel/syameera" element={<Artikel3 />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
     </HelmetProvider>

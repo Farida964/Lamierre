@@ -1,6 +1,6 @@
 [
-    {"id" : "1", "img": "/artikel aqdisha.png", "title" : "Aqdisha", "sub_title" : "Cahaya dari Baitul Maqdis", "konten" : "/artikel1"},
-    {"id" : "2", "img": "/artikel ayubi.png", "title" : "Ayubi", "sub_title" : "Jejak Sang Pembebas Al-Aqsha", "konten" : "/artikel2"},
-    {"id" : "3", "img": "/artikel syameera.png", "title" : "Syameera", "sub_title" : "Keberkahan Syam yang Menginspirasi", "konten" : "/artikel3"},
+    {"id" : "1", "img": "/artikel aqdisha.png", "title" : "Aqdisha", "sub_title" : "Cahaya dari Baitul Maqdis", "konten" : "/artikel/aqdisha"},
+    {"id" : "2", "img": "/artikel ayubi.png", "title" : "Ayubi", "sub_title" : "Jejak Sang Pembebas Al-Aqsha", "konten" : "/artikel/ayubi"},
+    {"id" : "3", "img": "/artikel syameera.png", "title" : "Syameera", "sub_title" : "Keberkahan Syam yang Menginspirasi", "konten" : "/artikel/syameera"},
     {"id" : "4", "img": "/lamierre soft opening.jpg", "title" : "L@mierrè Soft Opening", "sub_title" : "Soft Opening At Muslimah Market", "konten" : "https://www.instagram.com/p/DPQEPPhgRPO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="}
 ]
