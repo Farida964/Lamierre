@@ -1,7 +1,6 @@
 import styles from "./popular.module.css";
 import axios from "axios";
-import { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
+import React, { useEffect, useState, useMemo } from "react";
 import DetailProduct from "../../Product/DetailProduct/DetailProduct.jsx";
 import Payment from "../../../page/Payment.jsx";
 
@@ -16,8 +15,8 @@ function Popular() {
         setProducts(JSON.parse(local));
       } else {
         try {
-          const response = await axios.get("/product.json");
-          setProducts(response.data);
+          const response = await axios.get("/product.json", { cache: true });
+          setProducts(response.data || []);
         } catch (error) {
           console.error("Error fetching data:", error);
         }
@@ -26,16 +25,18 @@ function Popular() {
     fetchData();
   }, []);
 
-  const handleDetailClick = (item) => {
-    setSelectedProduct(item); // buka popup
-  };
+  const handleDetailClick = (item) => setSelectedProduct(item);
+  const handleClosePopup = () => setSelectedProduct(null);
 
-  const handleClosePopup = () => {
-    setSelectedProduct(null); // tutup popup
-  };
+  const popularIds = useMemo(
+    () => ["1", "2", "7", "9", "10", "11", "12", "15"],
+    []
+  );
 
-  const popularIds = ["1", "2", "7", "9", "10", "11", "12", "15"];
-  const popularProducts = products.filter(item => popularIds.includes(item.id));
+  const popularProducts = useMemo(
+    () => products.filter((item) => popularIds.includes(item.id)),
+    [products, popularIds]
+  );
 
   return (
     <div>
@@ -52,6 +53,7 @@ function Popular() {
               src={item.imgs[0]}
               alt={item.title}
               className={styles.image}
+              loading="lazy" // 🌿 lazy load image
             />
             <h3 className={styles.title}>{item.title}</h3>
             <button
@@ -65,7 +67,6 @@ function Popular() {
         ))}
       </div>
 
-      {/* POPUP Detail */}
       <DetailProduct
         isOpen={!!selectedProduct}
         onClose={handleClosePopup}
@@ -73,13 +74,9 @@ function Popular() {
       />
 
       <br />
-      <div className={styles.buttonWrapper}>
-        {/* <button>
-          <Link className={styles.button} to="/product">See More</Link>
-        </button> */}
-      </div>
+      <div className={styles.buttonWrapper}></div>
     </div>
   );
 }
 
-export default Popular;
+export default React.memo(Popular);

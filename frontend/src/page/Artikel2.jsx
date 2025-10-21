@@ -8,25 +8,24 @@ function Artikel2() {
   return (
     <>
       <Helmet>
-        {/* 🔹 TITLE — mengandung keyword utama */}
-        <title>AYUBI Lamierre | Kisah Generasi Salahuddin Al-Ayubi & Pembebasan Al-Aqsha</title>
+        <title>
+          AYUBI Lamierre | Kisah Generasi Salahuddin Al-Ayubi & Pembebasan Al-Aqsha
+        </title>
 
-        {/* 🔹 META DESCRIPTION (maks 155 karakter, menggugah & bermakna) */}
         <meta
           name="description"
           content="Temukan kisah inspiratif generasi Salahuddin Al-Ayubi yang menjadi saksi lahirnya para pembebas Al-Aqsha. Artikel penuh makna dari Hijab Lamierre."
         />
-
-        {/* 🔹 META KEYWORDS */}
         <meta
           name="keywords"
           content="Ayubi, Salahuddin Al-Ayubi, generasi pembebas, Al-Aqsha, hijab lamierre, hijab premium, inspirasi islami, kisah muslimah, sejarah islam"
         />
+        <link
+          rel="canonical"
+          href="https://lamierre.id/artikel/ayubi-generasi-pembebas-al-aqsha"
+        />
 
-        {/* 🔹 CANONICAL URL */}
-        <link rel="canonical" href="https://lamierre.id/artikel/ayubi-generasi-pembebas-al-aqsha" />
-
-        {/* 🔹 OPEN GRAPH (Facebook, WhatsApp, Instagram Preview) */}
+        {/* 🔹 OPEN GRAPH */}
         <meta
           property="og:title"
           content="AYUBI Lamierre | Kisah Generasi Salahuddin Al-Ayubi & Pembebasan Al-Aqsha"
@@ -61,32 +60,34 @@ function Artikel2() {
           content="https://lamierre.id/images/artikel/ayubi-lamierre.jpg"
         />
 
-        {/* 🔹 STRUCTURED DATA (Schema.org for Article) */}
+        {/* 🔹 STRUCTURED DATA */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "AYUBI Lamierre | Kisah Generasi Salahuddin Al-Ayubi & Pembebasan Al-Aqsha",
-            "author": {
+            headline:
+              "AYUBI Lamierre | Kisah Generasi Salahuddin Al-Ayubi & Pembebasan Al-Aqsha",
+            author: {
               "@type": "Organization",
-              "name": "Hijab Lamierre",
-              "url": "https://lamierre.id"
+              name: "Hijab Lamierre",
+              url: "https://lamierre.id",
             },
-            "publisher": {
+            publisher: {
               "@type": "Organization",
-              "name": "Hijab Lamierre",
-              "logo": {
+              name: "Hijab Lamierre",
+              logo: {
                 "@type": "ImageObject",
-                "url": "https://lamierre.id/images/logo.png"
-              }
+                url: "https://lamierre.id/images/logo.png",
+              },
             },
-            "datePublished": "2025-10-15",
-            "image": "https://lamierre.id/images/artikel/ayubi-lamierre.jpg",
-            "url": "https://lamierre.id/artikel/ayubi-generasi-pembebas-al-aqsha",
-            "description":
+            datePublished: "2025-10-15",
+            image: "https://lamierre.id/images/artikel/ayubi-lamierre.jpg",
+            url: "https://lamierre.id/artikel/ayubi-generasi-pembebas-al-aqsha",
+            description:
               "AYUBI adalah simbol semangat generasi Salahuddin Al-Ayubi — para pembebas Al-Aqsha. Sebuah kisah inspiratif dari Hijab Lamierre tentang keteguhan, iman, dan perjuangan yang abadi.",
-            "articleSection": "Inspirasi Islam & Sejarah",
-            "mainEntityOfPage": "https://lamierre.id/artikel/ayubi-generasi-pembebas-al-aqsha"
+            articleSection: "Inspirasi Islam & Sejarah",
+            mainEntityOfPage:
+              "https://lamierre.id/artikel/ayubi-generasi-pembebas-al-aqsha",
           })}
         </script>
       </Helmet>

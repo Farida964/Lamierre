@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import Hero from '../components/Hero/Hero';
+import Hero from "../components/Hero/Hero";
 import Artikel01 from "../components/Artikel/Artikel01/Artikel01";
 import { Helmet } from "react-helmet-async";
 
@@ -8,29 +8,28 @@ function Artikel1() {
   return (
     <>
       <Helmet>
-        {/* 🔹 TITLE */}
-        <title>Aqdisha Lamierre | Makna dan Asal Kata Baitul Maqdis | Hijab Lamierre</title>
+        <title>
+          Aqdisha Lamierre | Makna dan Asal Kata Baitul Maqdis | Hijab Lamierre
+        </title>
 
-        {/* 🔹 META DESCRIPTION (maks. 155 karakter, padat & menarik) */}
         <meta
           name="description"
           content="Temukan kisah di balik nama Aqdisha yang terinspirasi dari Baitul Maqdis. Artikel penuh makna dari Hijab Lamierre."
         />
-
-        {/* 🔹 META KEYWORDS */}
         <meta
           name="keywords"
           content="Aqdisha, Baitul Maqdis, hijab lamierre, hijab premium, hijab muslimah, hijab elegan, hijab syar'i, hijab modern"
         />
-
-        {/* 🔹 CANONICAL URL */}
         <link
           rel="canonical"
           href="https://lamierre.id/artikel/aqdisha-baitul-maqdis"
         />
 
-        {/* 🔹 OPEN GRAPH (Facebook, WhatsApp, dsb) */}
-        <meta property="og:title" content="Aqdisha Lamierre | Kisah dari Baitul Maqdis" />
+        {/* 🔹 OPEN GRAPH */}
+        <meta
+          property="og:title"
+          content="Aqdisha Lamierre | Kisah dari Baitul Maqdis"
+        />
         <meta
           property="og:description"
           content="Pelajari asal-usul nama Aqdisha yang diambil dari kata suci Baitul Maqdis. Temukan inspirasi hijabmu bersama Lamierre."
@@ -48,7 +47,10 @@ function Artikel1() {
 
         {/* 🔹 TWITTER CARD */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Aqdisha Lamierre | Makna Baitul Maqdis" />
+        <meta
+          name="twitter:title"
+          content="Aqdisha Lamierre | Makna Baitul Maqdis"
+        />
         <meta
           name="twitter:description"
           content="Cerita penuh makna dari Hijab Lamierre tentang Aqdisha, yang terinspirasi dari Baitul Maqdis."
@@ -58,32 +60,34 @@ function Artikel1() {
           content="https://lamierre.id/images/artikel/aqdisha-lamierre.jpg"
         />
 
-        {/* 🔹 STRUCTURED DATA (Schema.org for Article) */}
+        {/* 🔹 STRUCTURED DATA */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "Aqdisha Lamierre | Makna dan Asal Kata Baitul Maqdis",
-            "author": {
+            headline:
+              "Aqdisha Lamierre | Makna dan Asal Kata Baitul Maqdis",
+            author: {
               "@type": "Organization",
-              "name": "Hijab Lamierre",
-              "url": "https://lamierre.id"
+              name: "Hijab Lamierre",
+              url: "https://lamierre.id",
             },
-            "publisher": {
+            publisher: {
               "@type": "Organization",
-              "name": "Hijab Lamierre",
-              "logo": {
+              name: "Hijab Lamierre",
+              logo: {
                 "@type": "ImageObject",
-                "url": "https://lamierre.id/images/logo.png"
-              }
+                url: "https://lamierre.id/images/logo.png",
+              },
             },
-            "datePublished": "2025-10-01",
-            "image": "https://lamierre.id/images/artikel/aqdisha-lamierre.jpg",
-            "url": "https://lamierre.id/artikel/aqdisha-baitul-maqdis",
-            "description":
+            datePublished: "2025-10-01",
+            image: "https://lamierre.id/images/artikel/aqdisha-lamierre.jpg",
+            url: "https://lamierre.id/artikel/aqdisha-baitul-maqdis",
+            description:
               "Aqdisha berasal dari kata Baitul Maqdis yang berarti kesucian. Nama ini menjadi simbol hijab Lamierre—elegan, bermakna, dan penuh nilai spiritual.",
-            "articleSection": "Inspirasi Hijab & Sejarah",
-            "mainEntityOfPage": "https://lamierre.id/artikel/aqdisha-baitul-maqdis"
+            articleSection: "Inspirasi Hijab & Sejarah",
+            mainEntityOfPage:
+              "https://lamierre.id/artikel/aqdisha-baitul-maqdis",
           })}
         </script>
       </Helmet>

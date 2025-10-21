@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
+import { Suspense, lazy, useState, useEffect } from "react";
 import axios from "axios";
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
-import Hero from "../components/Hero/Hero";
+
+// Lazy load komponen berat
+const Navbar = lazy(() => import("../components/Navbar/Navbar"));
+const Hero = lazy(() => import("../components/Hero/Hero"));
+const Footer = lazy(() => import("../components/Footer/Footer"));
 
 function Review() {
   const [reviews, setReviews] = useState([]);
   const [newReview, setNewReview] = useState("");
   const [rating, setRating] = useState(0);
 
-  // URL backend
   const API_URL = "http://localhost:5000/api/reviews";
 
-  // Ambil data review dari backend
   useEffect(() => {
     fetchReviews();
   }, []);
@@ -26,19 +26,17 @@ function Review() {
     }
   };
 
-  // Submit review baru
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!newReview.trim() || rating === 0) return;
 
     try {
       await axios.post(API_URL, {
-        name: "Anonymous", // Bisa diganti input user
+        name: "Anonymous",
         text: newReview,
         rating,
       });
 
-      // Refresh review list setelah submit
       fetchReviews();
       setNewReview("");
       setRating(0);
@@ -48,7 +46,7 @@ function Review() {
   };
 
   return (
-    <div>
+    <Suspense fallback={<div>Loading...</div>}>
       <Navbar />
       <Hero />
 
@@ -107,7 +105,7 @@ function Review() {
       </div>
 
       <Footer />
-    </div>
+    </Suspense>
   );
 }
 

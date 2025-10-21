@@ -11,7 +11,7 @@ function Galeri() {
   useEffect(() => {
     const fetchArtikel = async () => {
       try {
-        const response = await axios.get("/artikel.json");
+        const response = await axios.get("/artikel.json", { cache: "force-cache" });
         setArtikel(response.data);
       } catch (error) {
         console.error("Error fetching artikel:", error);
@@ -24,8 +24,9 @@ function Galeri() {
         if (local) {
           setKonten(JSON.parse(local));
         } else {
-          const response = await axios.get("/konten.json");
+          const response = await axios.get("/konten.json", { cache: "force-cache" });
           setKonten(response.data);
+          localStorage.setItem("konten", JSON.stringify(response.data)); 
         }
       } catch (error) {
         console.error("Error fetching konten:", error);
@@ -39,10 +40,8 @@ function Galeri() {
   // === fungsi helper untuk redirect sesuai JSON ===
   const handleNavigate = (kontenValue) => {
     if (kontenValue.startsWith("http")) {
-      // kalau isinya URL (Instagram, dll)
       window.open(kontenValue, "_blank");
     } else {
-      // kalau internal route (misalnya /artikel1, artikel2, dst)
       navigate(kontenValue.startsWith("/") ? kontenValue : `/${kontenValue}`);
     }
   };
@@ -63,6 +62,8 @@ function Galeri() {
             src={artikel[0].img}
             alt="Artikel Atas"
             className={styles.artikelImg}
+            loading="lazy" 
+            decoding="async"
             style={{ cursor: "pointer" }}
           />
           <p className={styles.artikelDesc}>{artikel[0].desc}</p>
@@ -77,7 +78,9 @@ function Galeri() {
               src={item.img}
               alt={item.title}
               className={styles.media}
-              onClick={() => handleNavigate(item.konten)} 
+              onClick={() => handleNavigate(item.konten)}
+              loading="lazy" 
+              decoding="async"
               style={{ cursor: "pointer" }}
             />
             <h3 className={styles.title}>{item.title}</h3>
@@ -85,9 +88,6 @@ function Galeri() {
           </div>
         ))}
       </div>
-
-    
-    
     </div>
   );
 }
