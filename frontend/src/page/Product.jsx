@@ -35,7 +35,7 @@ function Product() {
         <meta name="twitter:image" content="https://lamierre.id/images/og-gallery.jpg" />
       </Helmet>
 
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<div>Tunggu yaa lagi loading...</div>}>
         <Navbar />
         <Hero />
         <Products />
